@@ -16,8 +16,8 @@ namespace Phonebook
             Console.WriteLine("~~~PhoneBook~~~");
 
          
-         //CreatePhoneBook();
-          Dictionary<string, string> phonebook = new Dictionary<string, string>();
+         
+          Dictionary<string, string> phonebook = new Dictionary<string, string>();//create the phonebook dictionary
           
         
          choice=ShowMenu();// shows the menu and returns the user's choice
@@ -35,11 +35,6 @@ namespace Phonebook
         }
         }
 
-        /*public static void CreatePhoneBook()
-        {
-            Dictionary phonebook = new Dictionary<string, string>();
-        }
-        */
 
         public static int ShowMenu()// simple menu
         {
