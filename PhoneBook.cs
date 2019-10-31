@@ -7,6 +7,7 @@ namespace Phonebook
     class Phonebook
     {
         List<Contact> Contacts;
+        Contact contact;
 
         public static void AddContact()
         {
@@ -15,7 +16,7 @@ namespace Phonebook
 
         public static void Display()
         {
-            
+
         }
 
     }

@@ -13,7 +13,7 @@ namespace Phonebook
         {
             int choice;
             Phonebook phonebook;
-            Contact contact;
+          
 
           Console.WriteLine("~~~PhoneBook~~~");
 
