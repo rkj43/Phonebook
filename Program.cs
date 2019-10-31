@@ -12,12 +12,13 @@ namespace Phonebook
         static void Main(string[] args)
         {
             int choice;
+            Phonebook phonebook;
+            Contact contact;
 
-            Console.WriteLine("~~~PhoneBook~~~");
+          Console.WriteLine("~~~PhoneBook~~~");
 
          
          
-          Dictionary<string, string> phonebook = new Dictionary<string, string>();//create the phonebook dictionary
           
         
          choice=ShowMenu();// shows the menu and returns the user's choice
@@ -25,7 +26,7 @@ namespace Phonebook
          {
          switch(choice)
          {
-             case 1 : AddContact(phonebook); break;
+             case 1 : phonebook.AddContact(); break;
              case 2 : PrintPhoneBook(phonebook); break;
              case 3 : DeleteContact(phonebook); break;
              case 4 : break;
