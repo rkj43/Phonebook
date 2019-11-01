@@ -7,16 +7,22 @@ namespace Phonebook
     class Phonebook
     {
         List<Contact> Contacts;
-        Contact contact;
+        
 
         public static void AddContact()
         {
+            Contact.GetData();
 
         }
 
         public static void Display()
         {
 
+        }
+
+        public static void DeleteContact()
+        {
+            
         }
 
     }
