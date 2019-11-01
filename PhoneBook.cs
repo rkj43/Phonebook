@@ -7,11 +7,13 @@ namespace Phonebook
     class Phonebook
     {
         List<Contact> Contacts;
+
+        Contact contact = new Contact();
         
 
         public static void AddContact()
         {
-            Contact.GetData();
+            Contact.GetData(contact);
 
         }
 
@@ -22,7 +24,7 @@ namespace Phonebook
 
         public static void DeleteContact()
         {
-            
+
         }
 
     }
