@@ -13,16 +13,9 @@ namespace Phonebook
         {
             PhoneBook phonebook = new PhoneBook();
             int choice;
-            
-          
-
-          Console.WriteLine("~~~PhoneBook~~~");
-
-         
-         
-          
         
          choice=ShowMenu();// shows the menu and returns the user's choice
+         
          while(choice!=4)
          {
          switch(choice)

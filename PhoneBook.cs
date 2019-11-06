@@ -8,11 +8,12 @@ namespace Phonebook
     {
         List<Contact> Contacts = new List<Contact>();
 
-        Contact contact = new Contact();
+        
         
 
         public  void AddContact()
         {
+            Contact contact = new Contact();
              Console.WriteLine("Please enter the name of the Person you wish to add to the phonebook");
              contact.name=Console.ReadLine();
              
@@ -22,21 +23,42 @@ namespace Phonebook
              contact.email=Console.ReadLine();
 
              Contacts.Add(contact);
+            
 
         }
 
         public  void Display()
         {
-            Console.WriteLine("Hello!");
-            for(int i =0; i<Contacts.Count;i++)
+            
+           
+           
+            foreach(  Contact contact in Contacts)
             {
-            Console.WriteLine(Contacts[i]);
+            Console.WriteLine(contact.name);
+            Console.WriteLine(contact.email);
+            Console.WriteLine(contact.number);
+            
             }
+
+            
 
         }
 
         public  void DeleteContact()
         {
+          /*   string deletekey;
+
+            //deletekey=GetInput(); will implement later
+            deletekey="rage";
+
+            foreach(  Contact contact in Contacts)
+            {
+                if(contact.name==deletekey)
+                {
+                    Contacts.Remove(contact);
+                }
+            }
+            */
 
         }
 

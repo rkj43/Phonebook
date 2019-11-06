@@ -8,9 +8,9 @@ namespace Phonebook
     {
 
         
-        public string name;
-        public string email;
-        public double number;
+        public string name{get;set;}
+        public string email{get;set;}
+        public double number{get;set;}
 
         
             public  void PrintConsole()
