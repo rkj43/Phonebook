@@ -26,7 +26,9 @@ namespace Phonebook
 
         public  void DeleteContact()
         {
+         Contact contact = new Contact();
          
+         Contacts.RemoveAt
             
         }
 
