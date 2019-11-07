@@ -10,7 +10,7 @@ namespace Phonebook
           {
                 Contact contact = new Contact();
 
-                Console.WriteLine("Please enter the name of the Person you wish to add to the phonebook");
+                Console.WriteLine("Please enter the  test name of the Person you wish to add to the phonebook");
                 contact.name=Console.ReadLine();
 
                 Console.WriteLine("Please enter his/her number");
