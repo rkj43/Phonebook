@@ -13,12 +13,7 @@ namespace Phonebook
         public double number{get;set;}
 
         
-            public  void PrintConsole()
-            {
-                
-            
-
-            }
+           
         
 
 
