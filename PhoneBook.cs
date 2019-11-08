@@ -7,29 +7,34 @@ namespace Phonebook
      class PhoneBook
     {
         List<Contact> Contacts = new List<Contact>();
-        InputOutputHandler inputoutputhandler = new InputOutputHandler();
+        
 
-        public  void AddContact()
+        public  void AddContact(Contact contact)
         {
             
              
-              Contacts.Add(inputoutputhandler.GetContact());
+              Contacts.Add(contact);
             
 
         }
 
-        public  void Display()
+        public  List<Contact> Display()
         {
-            inputoutputhandler.ShowContacts(Contacts);
+            return Contacts;
 
         }
 
         public  void DeleteContact()
         {
-         Contact contact = new Contact();
          
-         Contacts.RemoveAt
+         
+         Contacts.RemoveAt(Contacts.FindIndex(0,Contacts.Count,x=>x.name=="rage"));
             
+        }
+
+        public void FindContact()
+        {
+
         }
 
   

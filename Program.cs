@@ -20,14 +20,14 @@ namespace Phonebook
          while(choice!=4)
          {
          CallSwitch();
-        choice= inputoutputhandler.ShowMenu();
+        choice= inputoutputhandler.ShowMenu();//updation in while loop
         }
          void CallSwitch()
         {
             switch(choice)
          {
-             case 1 : phonebook.AddContact(); break;
-             case 2 : phonebook.Display(); break;
+             case 1 : phonebook.AddContact(inputoutputhandler.GetContact()); break;
+             case 2 : inputoutputhandler.ShowContacts(phonebook.Display()); break;
              case 3 : phonebook.DeleteContact(); break;
              case 4 : break;
              default : Console.WriteLine(" You have entered a wrong option, Please Try again");break;
