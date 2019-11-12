@@ -24,16 +24,25 @@ namespace Phonebook
 
         }
 
-        public  void DeleteContact()
+        public  void DeleteContact(string name)
         {
          
-         
-         Contacts.RemoveAt(Contacts.FindIndex(0,Contacts.Count,x=>x.name=="rage"));
+         try
+         {
+         Contacts.RemoveAt(Contacts.FindIndex(0,Contacts.Count,x=>x.name==name));
+         }
+         catch(Exception exception)
+         {
+             Console.Write(exception);
+         }
             
         }
 
-        public void FindContact()
+        public int FindContact(string name)
         {
+           int index;
+           index = Contacts.FindIndex(0,Contacts.Count,x=>x.name==name);
+           return index;
 
         }
 
