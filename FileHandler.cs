@@ -13,8 +13,21 @@ namespace Phonebook
  
             System.IO.File.WriteAllText(@"D:\phonebook.txt", json);
         }
+
+        public void jsonReader(List<Contact> Contacts)
+        {
+      
+        
+            using (StreamReader reader = new StreamReader(@"D:\phonebook.txt"))
+            {
+                string json = reader.ReadToEnd();
+                Contacts = JsonConvert.DeserializeObject<List<Contact>>(json);
+            }
+        }           
+
+        }
     }
 
- }
+ 
 
 

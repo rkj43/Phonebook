@@ -37,7 +37,7 @@ namespace Phonebook
                foreach (Contact contact in Contacts)
             {
 
-            Console.WriteLine("Name: {0} Email : {1} Number :{2}",contact.name,contact.email,contact.number);
+               Console.WriteLine("Name: {0} Email : {1} Number :{2}",contact.name,contact.email,contact.number);
            
             }
           }
@@ -50,8 +50,8 @@ namespace Phonebook
                }
                else
                {
-               Console.WriteLine("The contact has been found at index number : {0}",index);
-               Console.WriteLine("Name: {0} Email : {1} Number :{2}",Contacts[index].name,Contacts[index].email,Contacts[index].number);
+                    Console.WriteLine("The contact has been found at index number : {0}",index);
+                    Console.WriteLine("Name: {0} Email : {1} Number :{2}",Contacts[index].name,Contacts[index].email,Contacts[index].number);
                }
           }
 
@@ -60,7 +60,6 @@ namespace Phonebook
                string name;
                Console.WriteLine("Enter the name of the contact");
                name=Console.ReadLine();
-
                return name;
           }
 

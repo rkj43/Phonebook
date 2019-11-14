@@ -13,7 +13,8 @@ namespace Phonebook
         {
             PhoneBook phonebook = new PhoneBook();
             ConsoleHandler consoleHandler = new ConsoleHandler();
-             
+            
+             phonebook.ReadFromFile();
             int choice;
         
          choice=consoleHandler.ShowMenu();;// shows the menu and returns the user's choice

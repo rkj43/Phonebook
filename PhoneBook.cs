@@ -7,9 +7,15 @@ namespace Phonebook
     {
         List<Contact> contacts = new List<Contact>();
         
+        public void ReadFromFile()
+        {
+            FileHandler fileHandler = new FileHandler();
+
+            fileHandler.jsonReader(contacts);
+        }
         
 
-        public  void AddContact(Contact contact)
+        public void AddContact(Contact contact)
         {
             
              
