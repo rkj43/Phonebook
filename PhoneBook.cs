@@ -1,26 +1,26 @@
 using System;
 using System.Collections.Generic;
 using System.Collections;
-using System.Net.Mail;
 namespace Phonebook
 {
      class PhoneBook
     {
-        List<Contact> Contacts = new List<Contact>();
+        List<Contact> contacts = new List<Contact>();
+        
         
 
         public  void AddContact(Contact contact)
         {
             
              
-              Contacts.Add(contact);
+              contacts.Add(contact);
             
 
         }
 
         public  List<Contact> Display()
         {
-            return Contacts;
+            return contacts;
 
         }
 
@@ -29,11 +29,11 @@ namespace Phonebook
          
          try
          {
-         Contacts.RemoveAt(Contacts.FindIndex(0,Contacts.Count,x=>x.name==name));
+         contacts.RemoveAt(contacts.FindIndex(0,contacts.Count,x=>x.name==name));
          }
          catch(Exception exception)
          {
-             Console.Write(exception);
+             throw exception;
          }
             
         }
@@ -41,12 +41,18 @@ namespace Phonebook
         public int FindContact(string name)
         {
            int index;
-           index = Contacts.FindIndex(0,Contacts.Count,x=>x.name==name);
+           index = contacts.FindIndex(0,contacts.Count,x=>x.name==name);
            return index;
 
         }
 
-  
+        public void StoreData()
+        {
+            FileHandler fileHandler = new FileHandler();
+            fileHandler.jsonWriter(contacts);
+        }
+       
+    
 
     }
 

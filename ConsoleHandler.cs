@@ -5,7 +5,7 @@ using System.Net.Mail;
 using System.Text.RegularExpressions;
 namespace Phonebook
 {
-     class InputOutputHandler
+     class ConsoleHandler : IHandler
      {
           public Contact GetContacts()
           {
@@ -80,15 +80,15 @@ namespace Phonebook
         
         public static bool isValidEmail(string inputEmail)
           {
-           string strRegex = @"^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}" +
-          @"\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\" + 
-          @".)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$";
-          Regex re = new Regex(strRegex);
-           if (re.IsMatch(inputEmail))
-           return true;
-          else
-           return false;
-}
+           bool result;
+           string emailRegex = @"^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}" +
+           @"\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\" + 
+           @".)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$";
+           Regex regex = new Regex(emailRegex);
+           result=(regex.IsMatch(inputEmail))?true:false;
+           return result;
+           
+          }
 
 
 

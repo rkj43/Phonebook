@@ -12,28 +12,33 @@ namespace Phonebook
         static void Main(string[] args)
         {
             PhoneBook phonebook = new PhoneBook();
-            InputOutputHandler inputoutputhandler = new InputOutputHandler();
+            ConsoleHandler consoleHandler = new ConsoleHandler();
+             
             int choice;
         
-         choice=inputoutputhandler.ShowMenu();;// shows the menu and returns the user's choice
+         choice=consoleHandler.ShowMenu();;// shows the menu and returns the user's choice
          
          while(choice!=5)
          {
          CallSwitch();
-        choice= inputoutputhandler.ShowMenu();//updation in while loop
+        choice= consoleHandler.ShowMenu();//updation in while loop
         }
          void CallSwitch()
         {
             switch(choice)
          {
-             case 1 : phonebook.AddContact(inputoutputhandler.GetContacts()); break;
-             case 2 : inputoutputhandler.ShowContacts(phonebook.Display()); break;
-             case 3 : phonebook.DeleteContact(inputoutputhandler.GetName()); break;
-             case 4 : inputoutputhandler.ShowContacts(phonebook.Display(),phonebook.FindContact(inputoutputhandler.GetName()));break;
+             case 1 : phonebook.AddContact(consoleHandler.GetContacts()); break;
+             case 2 : consoleHandler.ShowContacts(phonebook.Display()); break;
+             case 3 : phonebook.DeleteContact(consoleHandler.GetName()); break;
+             case 4 : consoleHandler.ShowContacts(phonebook.Display(),phonebook.FindContact(consoleHandler.GetName()));break;
              case 5 : break;
              default : Console.WriteLine(" You have entered a wrong option, Please Try again");break;
          }
         }
+
+        phonebook.StoreData();
+
+
         }
 
 

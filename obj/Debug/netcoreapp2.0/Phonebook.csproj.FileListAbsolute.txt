@@ -1,0 +1,10 @@
+D:\Phonebook\bin\Debug\netcoreapp2.0\Phonebook.deps.json
+D:\Phonebook\bin\Debug\netcoreapp2.0\Phonebook.runtimeconfig.json
+D:\Phonebook\bin\Debug\netcoreapp2.0\Phonebook.runtimeconfig.dev.json
+D:\Phonebook\bin\Debug\netcoreapp2.0\Phonebook.dll
+D:\Phonebook\bin\Debug\netcoreapp2.0\Phonebook.pdb
+D:\Phonebook\obj\Debug\netcoreapp2.0\Phonebook.csproj.CoreCompileInputs.cache
+D:\Phonebook\obj\Debug\netcoreapp2.0\Phonebook.AssemblyInfoInputs.cache
+D:\Phonebook\obj\Debug\netcoreapp2.0\Phonebook.AssemblyInfo.cs
+D:\Phonebook\obj\Debug\netcoreapp2.0\Phonebook.dll
+D:\Phonebook\obj\Debug\netcoreapp2.0\Phonebook.pdb
