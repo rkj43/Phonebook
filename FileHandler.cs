@@ -20,12 +20,10 @@ namespace Phonebook
 
         public void jsonReader(List<Contact> contacts)
         {
-           using (StreamReader file = File.OpenText((@"D:\phonebook.json")))
-            {
-                JsonSerializer serializer = new JsonSerializer();
-                contacts = (List<Contact>)serializer.Deserialize(file, typeof(List<Contact>));
-            }
-            
+           
+            string json = File.ReadAllText(@"D:\phonebook.json");
+            contacts = JsonConvert.DeserializeObject<List<Contact>>(json);
+
             
         }
 
