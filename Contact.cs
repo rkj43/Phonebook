@@ -12,6 +12,8 @@ namespace Phonebook
         public string email{get;set;}
         public double number{get;set;}
 
+        public string group{get;set;}
+
         
            
         

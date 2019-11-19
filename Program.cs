@@ -4,50 +4,52 @@ using System.Collections;
 
 namespace Phonebook
 {
-     
+
     class Program
     {
-        
-         
+
+
         static void Main(string[] args)
         {
             PhoneBook phonebook = new PhoneBook();
             ConsoleHandler consoleHandler = new ConsoleHandler();
+            FileHandler fileHandler = new FileHandler();
+
+            phonebook.ReadFromFile();
             
-             phonebook.ReadFromFile();
             int choice;
-        
-         choice=consoleHandler.ShowMenu();;// shows the menu and returns the user's choice
-         
-         while(choice!=5)
-         {
-         CallSwitch();
-        choice= consoleHandler.ShowMenu();//updation in while loop
+
+            choice = consoleHandler.ShowMenu(); ;// shows the menu and returns the user's choice
+
+            while (choice != 5)
+            {
+                CallSwitch();
+                choice = consoleHandler.ShowMenu();//updation in while loop
+            }
+            void CallSwitch()
+            {
+                switch (choice)
+                {
+                    case 1: phonebook.AddContact(consoleHandler.GetContacts()); break;
+                    case 2: consoleHandler.ShowContacts(phonebook.Display()); break;
+                    case 3: phonebook.DeleteContact(consoleHandler.GetName()); break;
+                    case 4: consoleHandler.ShowContacts(phonebook.Display(), phonebook.FindContact(consoleHandler.GetName())); break;
+                    case 5: break;
+                    default: Console.WriteLine(" You have entered a wrong option, Please Try again"); break;
+                }
+            }
+
+            phonebook.StoreData();// STORE from contacts to file.
+
+
         }
-         void CallSwitch()
-        {
-            switch(choice)
-         {
-             case 1 : phonebook.AddContact(consoleHandler.GetContacts()); break;
-             case 2 : consoleHandler.ShowContacts(phonebook.Display()); break;
-             case 3 : phonebook.DeleteContact(consoleHandler.GetName()); break;
-             case 4 : consoleHandler.ShowContacts(phonebook.Display(),phonebook.FindContact(consoleHandler.GetName()));break;
-             case 5 : break;
-             default : Console.WriteLine(" You have entered a wrong option, Please Try again");break;
-         }
-        }
-
-        phonebook.StoreData();
-
-
-        }
 
 
 
-        
-
-        
 
 
-}
+
+
+
+    }
 }

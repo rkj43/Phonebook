@@ -5,7 +5,7 @@ namespace Phonebook
     {
         void DisplayException(Exception exception)
         {
-            
+
         }
     }
 }
