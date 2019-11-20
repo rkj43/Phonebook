@@ -15,7 +15,7 @@ namespace Phonebook
             ConsoleHandler consoleHandler = new ConsoleHandler();
             FileHandler fileHandler = new FileHandler();
 
-            phonebook.ReadFromFile();
+            phonebook.AddContact(fileHandler.jsonReader());//reading from file for intial.
             
             int choice;
 
@@ -39,7 +39,7 @@ namespace Phonebook
                 }
             }
 
-            phonebook.StoreData();// STORE from contacts to file.
+            fileHandler.jsonWriter(phonebook.Display());// storing data into file.
 
 
         }

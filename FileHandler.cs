@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Collections;
 using System.IO;
+using System;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 namespace Phonebook
@@ -11,21 +12,22 @@ namespace Phonebook
         {
             //string json = JsonConvert.SerializeObject(contacts, Formatting.Indented);
             string json = JsonConvert.SerializeObject(contacts.ToArray());
-            File.AppendAllText(@"D:\phonebook.json",json);
+            File.WriteAllText(@"D:\phonebook.json",json);
 
 
-         //   StreamWriter streamWriter = new StreamWriter(@"D:\phonebook.json");
-         //   streamWriter.WriteLine(json);
+         
         }
 
-        public void jsonReader(List<Contact> contacts)
+        public List<Contact>  jsonReader()
         {
            
             string json = File.ReadAllText(@"D:\phonebook.json");
-            contacts = JsonConvert.DeserializeObject<List<Contact>>(json);
+            return(JsonConvert.DeserializeObject<List<Contact>>(json));
 
             
         }
+
+      
 
     }
 }

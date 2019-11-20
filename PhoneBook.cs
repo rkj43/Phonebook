@@ -7,16 +7,7 @@ namespace Phonebook
     {
         List<Contact> contacts = new List<Contact>();
 
-        public void ReadFromFile()
-        {
-            FileHandler fileHandler = new FileHandler();
-
-            fileHandler.jsonReader(contacts);
-        
-        }
-
-
-        public void AddContact(Contact contact)
+        public void AddContact(Contact contact)//adding from console
         {
 
 
@@ -25,9 +16,17 @@ namespace Phonebook
 
         }
 
+        public void AddContact(List<Contact> filecontacts)//adding from file
+        {
+
+            this.contacts = filecontacts;
+
+
+        }
+
       
 
-        public List<Contact> Display()
+        public List<Contact> Display()//lists all contents in the phonebook
         {
             return contacts;
 
@@ -55,11 +54,7 @@ namespace Phonebook
 
         }
 
-        public void StoreData()
-        {
-            FileHandler fileHandler = new FileHandler();
-            fileHandler.jsonWriter(contacts);
-        }
+        
 
 
 
