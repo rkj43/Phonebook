@@ -12,7 +12,7 @@ namespace Phonebook
         {
             //string json = JsonConvert.SerializeObject(contacts, Formatting.Indented);
             string json = JsonConvert.SerializeObject(contacts.ToArray());
-            File.WriteAllText(@"D:\phonebook.json",json);
+            File.WriteAllText(@"D:\Phonebook\phonebook.json",json);
 
 
          
@@ -21,7 +21,7 @@ namespace Phonebook
         public List<Contact>  jsonReader()
         {
            
-            string json = File.ReadAllText(@"D:\phonebook.json");
+            string json = File.ReadAllText(@"D:\Phonebook\phonebook.json");
             return(JsonConvert.DeserializeObject<List<Contact>>(json));
 
             
