@@ -10,12 +10,9 @@ namespace Phonebook
     {
         public void jsonWriter(List<Contact> contacts)
         {
-            //string json = JsonConvert.SerializeObject(contacts, Formatting.Indented);
+            //string json = JsonConvert.SerializeObject(contacts, Formatting.Indented); ------------>>this also works, just file formatting difference.
             string json = JsonConvert.SerializeObject(contacts.ToArray());
             File.WriteAllText(@"D:\Phonebook\phonebook.json",json);
-
-
-         
         }
 
         public List<Contact>  jsonReader()
@@ -27,6 +24,15 @@ namespace Phonebook
             
         }
 
+        public string GetName()
+        {
+            string name;
+            Console.WriteLine("Enter the name of the contact");
+            name = Console.ReadLine();
+            return name;
+        }
+
+       
       
 
     }

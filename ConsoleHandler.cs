@@ -15,10 +15,11 @@ namespace Phonebook
             contact.name = Console.ReadLine();
 
             Console.WriteLine("Please enter his/her number");
-            contact.number = Convert.ToDouble(Console.ReadLine());
+            contact.number = Console.ReadLine();
 
             Console.WriteLine("Please enter his/her email");
             contact.email = Console.ReadLine();
+            
             return contact;
 
         }
@@ -68,18 +69,7 @@ namespace Phonebook
 
         }
 
-        public static bool isValidEmail(string inputEmail)
-        {
-            bool result;
-            string emailRegex = @"^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}" +
-            @"\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\" +
-            @".)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$";
-            Regex regex = new Regex(emailRegex);
-            result = (regex.IsMatch(inputEmail)) ? true : false;
-            return result;
-
-        }
-
+       
 
 
 

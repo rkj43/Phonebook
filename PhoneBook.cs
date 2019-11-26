@@ -9,22 +9,13 @@ namespace Phonebook
 
         public void AddContact(Contact contact)//adding from console
         {
-
-
             contacts.Add(contact);
-
-
         }
 
         public void AddContact(List<Contact> filecontacts)//adding from file
         {
-
             this.contacts = filecontacts;
-
-
         }
-
-      
 
         public List<Contact> Display()//lists all contents in the phonebook
         {
@@ -51,13 +42,7 @@ namespace Phonebook
             int index;
             index = contacts.FindIndex(0, contacts.Count, x => x.name == name);
             return index;
-
         }
-
-        
-
-
-
     }
 
 }

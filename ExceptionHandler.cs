@@ -1,7 +1,8 @@
 using System;
 namespace Phonebook
 {
-    class ExceptionHandler
+    // custom Exception class
+    class ExceptionHandler : Exception //inheriting from Exception class
     {
         void DisplayException(Exception exception)
         {

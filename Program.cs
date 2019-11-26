@@ -22,10 +22,10 @@ namespace Phonebook
             choice = consoleHandler.ShowMenu(); ;// shows the menu and returns the user's choice
 
             while (choice != 5)
-            {
-                CallSwitch();
-                choice = consoleHandler.ShowMenu();//updation in while loop
-            }
+                {
+                    CallSwitch();
+                    choice = consoleHandler.ShowMenu();//updation in while loop
+                }
             void CallSwitch()
             {
                 switch (choice)
@@ -38,18 +38,7 @@ namespace Phonebook
                     default: Console.WriteLine(" You have entered a wrong option, Please Try again"); break;
                 }
             }
-
             fileHandler.jsonWriter(phonebook.Display());// storing data into file.
-
-
         }
-
-
-
-
-
-
-
-
     }
 }
