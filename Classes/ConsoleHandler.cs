@@ -21,7 +21,9 @@ namespace Phonebook
             Console.WriteLine("Please enter his/her email");
             contact.email = Console.ReadLine();
 
-            if((validation.isValidNumber(contact.number)==true&&(validation.isValidEmail(contact.email))==true&&(validation.isValidName(contact.name))==true))
+            if((validation.isValidNumber(contact.number) == true &&
+            (validation.isValidEmail(contact.email)) == true &&
+            (validation.isValidName(contact.name))==true))
             {
             return contact;
             }

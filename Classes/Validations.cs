@@ -31,8 +31,8 @@ namespace Phonebook
 
         public  bool isValidName(string name)
         {   
-            string numberRegex = @"^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$";
-            Regex regex = new Regex(numberRegex);
+            string nameRegex = @"^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$";
+            Regex regex = new Regex(nameRegex);
             bool result;
             result = (regex.IsMatch(name)) ? true : false;
             return result;
