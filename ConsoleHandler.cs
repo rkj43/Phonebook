@@ -7,24 +7,34 @@ namespace Phonebook
 {
     class ConsoleHandler : IHandler
     {
-        public Contact GetContacts()
+        public Contact getContacts()
         {
             Contact contact = new Contact();
+            Validations validation = new Validations();
 
             Console.WriteLine("Please enter the  test name of the Person you wish to add to the phonebook");
             contact.name = Console.ReadLine();
-
+            
             Console.WriteLine("Please enter his/her number");
             contact.number = Console.ReadLine();
 
             Console.WriteLine("Please enter his/her email");
             contact.email = Console.ReadLine();
-            
-            return contact;
 
+            if((validation.isValidNumber(contact.number)==true&&(validation.isValidEmail(contact.email))==true&&(validation.isValidName(contact.name))==true))
+            {
+            return contact;
+            }
+
+            else
+            {
+                Console.WriteLine("You entered wrong data, There was an error while validating the data you have entered . Please check and try again");
+                 Contact dummycontact= new Contact();
+                 return dummycontact;
+            }
         }
 
-        public void ShowContacts(List<Contact> Contacts)
+        public void showContacts(List<Contact> Contacts)
         {
             foreach (Contact contact in Contacts)
             {
@@ -34,7 +44,7 @@ namespace Phonebook
             }
         }
 
-        public void ShowContacts(List<Contact> Contacts, int index)
+        public void showContacts(List<Contact> Contacts, int index)// polymorphism 
         {
             if (index == -1)
             {
@@ -47,7 +57,7 @@ namespace Phonebook
             }
         }
 
-        public string GetName()
+        public string getName()
         {
             string name;
             Console.WriteLine("Enter the name of the contact");
@@ -57,7 +67,7 @@ namespace Phonebook
 
 
 
-        public int ShowMenu()// simple menu
+        public int selectFromMenu()// simple menu
         {
 
             Console.WriteLine(" 1. Add a contact");

@@ -6,8 +6,8 @@ namespace Phonebook
     interface IHandler
     {
         
-       void ShowContacts(List<Contact> contacts);
-        string GetName();
+       void showContacts(List<Contact> contacts);
+        string getName();
 
     }
 

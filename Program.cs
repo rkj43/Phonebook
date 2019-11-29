@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Collections;
 
+
 namespace Phonebook
 {
 
@@ -15,20 +16,40 @@ namespace Phonebook
             ConsoleHandler consoleHandler = new ConsoleHandler();
             FileHandler fileHandler = new FileHandler();
 
-            phonebook.AddContact(fileHandler.jsonReader());//reading from file for intial.
+            phonebook.addContact(fileHandler.jsonReader());//reading from file for intial.
+            
             
             int choice;
 
-            choice = consoleHandler.ShowMenu(); ;// shows the menu and returns the user's choice
+            choice = consoleHandler.selectFromMenu(); ;// shows the menu and returns the user's choice
 
             while (choice != 5)
                 {
                     CallSwitch();
-                    choice = consoleHandler.ShowMenu();//updation in while loop
+                    choice = consoleHandler.selectFromMenu();//updation in while loop
                 }
             void CallSwitch()
             {
                 switch (choice)
+                {
+                    case 1: phonebook.addContact(consoleHandler.getContacts()); break;
+                    case 2: consoleHandler.showContacts(phonebook.display()); break;
+                    case 3: phonebook.deleteContact(consoleHandler.getName()); break;
+                    case 4: consoleHandler.showContacts(phonebook.display(), phonebook.findContact(consoleHandler.getName())); break;
+                    case 5: break;
+                    default: Console.WriteLine(" You have entered a wrong option, Please Try again"); break;
+                }
+
+                
+            }
+             fileHandler.jsonWriter(phonebook.display());// storing data into file.
+           
+        }
+    }
+}
+
+ /*         Switch for console and file handling stuff
+            switch (choice)
                 {
                     case 1: phonebook.AddContact(consoleHandler.GetContacts()); break;
                     case 2: consoleHandler.ShowContacts(phonebook.Display()); break;
@@ -37,8 +58,11 @@ namespace Phonebook
                     case 5: break;
                     default: Console.WriteLine(" You have entered a wrong option, Please Try again"); break;
                 }
-            }
-            fileHandler.jsonWriter(phonebook.Display());// storing data into file.
-        }
-    }
-}
+
+                  FileHandler fileHandler = new FileHandler();
+
+                  phonebook.AddContact(fileHandler.jsonReader());//reading from file for intial.
+                 fileHandler.jsonWriter(phonebook.Display());// storing data into file.
+                */
+
+                

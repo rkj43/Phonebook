@@ -7,23 +7,23 @@ namespace Phonebook
     {
         List<Contact> contacts = new List<Contact>();
 
-        public void AddContact(Contact contact)//adding from console
+        public void addContact(Contact contact)//adding from console
         {
             contacts.Add(contact);
         }
 
-        public void AddContact(List<Contact> filecontacts)//adding from file
+        public void addContact(List<Contact> filecontacts)//adding from file
         {
             this.contacts = filecontacts;
         }
 
-        public List<Contact> Display()//lists all contents in the phonebook
+        public List<Contact> display()//lists all contents in the phonebook
         {
             return contacts;
 
         }
 
-        public void DeleteContact(string name)
+        public void deleteContact(string name)
         {
 
             try
@@ -37,7 +37,7 @@ namespace Phonebook
 
         }
 
-        public int FindContact(string name)
+        public int findContact(string name)
         {
             int index;
             index = contacts.FindIndex(0, contacts.Count, x => x.name == name);
