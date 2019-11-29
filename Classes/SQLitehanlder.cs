@@ -9,11 +9,11 @@ namespace Phonebook
         {
 
         }
-        public void StoreDB()
+        public void storeToDataBase()
         {
 
         }
-        public void RetreiveDB()
+        public void retreiveFromDataBase()
         {
 
         }

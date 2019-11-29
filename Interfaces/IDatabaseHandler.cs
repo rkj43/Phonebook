@@ -4,7 +4,7 @@ namespace Phonebook
    
     interface IDatabaseHandler
     {
-         void StoreDB();
-         void RetreiveDB();
+         void storeToDataBase();
+         void retreiveFromDataBase();
     }
 }
