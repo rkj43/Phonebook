@@ -6,16 +6,16 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 namespace Phonebook
 {
-    class FileHandler
+    class FileHandler 
     {
-        public void jsonWriter(List<Contact> contacts)
+        public void exportAsJson(List<Contact> contacts)
         {
             //string json = JsonConvert.SerializeObject(contacts, Formatting.Indented); ------------>>this also works, just file formatting difference.
             string json = JsonConvert.SerializeObject(contacts.ToArray());
             File.WriteAllText(@"D:\Phonebook\phonebook.json",json);
         }
 
-        public List<Contact>  jsonReader()
+        public List<Contact>  readContactsFromJson()
         {
            
             string json = File.ReadAllText(@"D:\Phonebook\phonebook.json");

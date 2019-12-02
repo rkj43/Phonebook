@@ -3,7 +3,7 @@ namespace Phonebook
 {
 
     // need to work out what all methods can be put in this interface
-    interface IHandler
+    interface IDataHandler
     {
         
        void showContacts(List<Contact> contacts);

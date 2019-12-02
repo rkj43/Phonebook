@@ -5,9 +5,9 @@ using System.Net.Mail;
 using System.Text.RegularExpressions;
 namespace Phonebook
 {
-    class ConsoleHandler : IHandler
+    class ConsoleHandler : IDataHandler
     {
-        public Contact getContacts()
+        public Contact getContactToCreate()
         {
             Contact contact = new Contact();
             Validations validation = new Validations();
@@ -31,8 +31,8 @@ namespace Phonebook
             else
             {
                 Console.WriteLine("You entered wrong data, There was an error while validating the data you have entered . Please check and try again");
-                 Contact dummycontact= new Contact();
-                 return dummycontact;
+                 
+                 return null;
             }
         }
 

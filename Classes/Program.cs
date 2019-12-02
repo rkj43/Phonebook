@@ -16,7 +16,7 @@ namespace Phonebook
             ConsoleHandler consoleHandler = new ConsoleHandler();
             FileHandler fileHandler = new FileHandler();
 
-            phonebook.addContact(fileHandler.jsonReader());//reading from file for intial.
+            phonebook.addContact(fileHandler.readContactsFromJson());//reading from file for intial.
             
             
             int choice;
@@ -32,17 +32,17 @@ namespace Phonebook
             {
                 switch (choice)
                 {
-                    case 1: phonebook.addContact(consoleHandler.getContacts()); break;
-                    case 2: consoleHandler.showContacts(phonebook.display()); break;
+                    case 1: phonebook.addContact(consoleHandler.getContactToCreate()); break;
+                    case 2: consoleHandler.showContacts(phonebook.getContacts()); break;
                     case 3: phonebook.deleteContact(consoleHandler.getName()); break;
-                    case 4: consoleHandler.showContacts(phonebook.display(), phonebook.findContact(consoleHandler.getName())); break;
+                    case 4: consoleHandler.showContacts(phonebook.getContacts(), phonebook.findContact(consoleHandler.getName())); break;
                     case 5: break;
                     default: Console.WriteLine(" You have entered a wrong option, Please Try again"); break;
                 }
 
                 
             }
-             fileHandler.jsonWriter(phonebook.display());// storing data into file.
+             fileHandler.exportAsJson(phonebook.display());// storing data into file.
            
         }
     }

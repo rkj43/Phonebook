@@ -12,12 +12,12 @@ namespace Phonebook
             contacts.Add(contact);
         }
 
-        public void addContact(List<Contact> filecontacts)//adding from file
+        public void addContact(List<Contact> contactsToAdd)//adding from file
         {
-            this.contacts = filecontacts;
+            this.contacts = contactsToAdd;
         }
 
-        public List<Contact> display()//lists all contents in the phonebook
+        public List<Contact> getContacts()//lists all contents in the phonebook
         {
             return contacts;
 
