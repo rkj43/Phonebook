@@ -42,7 +42,7 @@ namespace Phonebook
 
                 
             }
-             fileHandler.exportAsJson(phonebook.display());// storing data into file.
+             fileHandler.exportAsJson(phonebook.getContacts());// storing data into file.
            
         }
     }
